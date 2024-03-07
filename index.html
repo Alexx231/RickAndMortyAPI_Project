@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick Y Morty</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> <!-- Archivo CSS externo para Bootstrap -->
+  <link rel="stylesheet" href="css/styles.css"> <!-- Archivo CSS personalizado -->
+  <link rel="icon" href="img/ricky_y_morty.png"> <!-- Imagen del favicon -->
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center my-4">Rick Y Morty</h1> <!-- Encabezado -->
+    <div id="characters" class="row"></div> <!-- Espacio reservado para los personajes -->
+  </div>
+  <div class="text-center my-4">
+    <input id="search" type="text" placeholder="Buscar personaje"> <!-- Campo de entrada para buscar personajes -->
+    <button onclick="searchCharacter()" class="btn btn-primary">Buscar</button> <!-- Botón para iniciar la búsqueda de personajes -->
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> <!-- Biblioteca JavaScript externa - jQuery -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> <!-- Biblioteca JavaScript externa - Bootstrap -->
+  <script src="https://unpkg.com/i18next@19.9.2/i18next.min.js"></script> <!-- Biblioteca JavaScript externa - i18next -->
+  <script src="js/rickMorty.js"></script> <!-- Archivo JavaScript personalizado -->
+</body>
+</html>

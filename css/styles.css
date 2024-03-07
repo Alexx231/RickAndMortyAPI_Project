@@ -1,0 +1,220 @@
+/* Estilos para el cuerpo de la página */
+body {
+    background: linear-gradient(90deg, #020024 0%, #090979 37%, #00d4ff 100%); /* Fondo degradado */
+    background-size: cover;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+}
+
+/* Estilos para el título principal */
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #50fa7b;
+    text-shadow: 3px 3px 5px rgba(0, 212, 255, 0.5); /* Sombra del texto */
+    animation: glow 2s ease-in-out infinite, float 2s ease-in-out infinite; /* Animaciones */
+    font-size: 3em;
+    background-image: url('../img/portal.webp'); /* Imagen de fondo */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0, 212, 255, 0.2); /* Sombra del contenedor */
+}
+
+/* Animación de brillo para el título */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00d4ff;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00d4ff, 0 0 50px #00d4ff, 0 0 60px #00d4ff;
+    }
+}
+
+/* Animación de flotación para el título */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border: 4px solid;
+    border-image-source: linear-gradient(to right, #00f260, #0575e6); /* Borde con degradado */
+    border-image-slice: 1;
+    animation: border-glow 3s ease-in-out infinite; /* Animación de brillo para el borde */
+    background-color: rgba(0, 212, 255, 0.1); /* Color de fondo */
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease-in; /* Animación de aparición */
+    box-shadow: 0 8px 16px 0 rgba(0,212,255,0.2); /* Sombra de la tarjeta */
+    transition: transform .5s; /* Transición al hacer hover */
+    position: relative;
+}
+
+/* Animación de brillo para el borde de las tarjetas */
+@keyframes border-glow {
+    0% {
+        border-image-source: linear-gradient(to right, #00f260, #0575e6);
+    }
+    50% {
+        border-image-source: linear-gradient(to right, #0575e6, #00f260);
+    }
+    100% {
+        border-image-source: linear-gradient(to right, #00f260, #0575e6);
+    }
+}
+
+/* Estilos para el campo de búsqueda */
+#search {
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    box-shadow: 0 0 15px 4px rgba(0, 212, 255, 0.2); /* Sombra del campo de búsqueda */
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    margin-right: 10px;
+}
+
+#search:focus {
+    box-shadow: 0 0 15px 4px rgba(0, 212, 255, 0.5); /* Sombra al hacer focus */
+    width: 250px;
+}
+
+/* Estilos para el botón primario */
+.btn-primary {
+    background-color: #00d4ff;
+    border: none;
+    box-shadow: 0 0 15px 4px rgba(0, 212, 255, 0.2); /* Sombra del botón */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #00b8d4;
+    box-shadow: 0 0 15px 4px rgba(0, 212, 255, 0.5); /* Sombra al hacer hover */
+}
+
+/* Estilos al hacer hover en las tarjetas */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform .5s;
+}
+
+/* Estilos para el contenido interno de las tarjetas */
+.card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* Estilos para la parte frontal y trasera de las tarjetas */
+.card-front, .card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Estilos para la parte trasera de las tarjetas */
+.card-back {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-title {
+    color: #50fa7b;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00d4ff;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.card-text {
+    color: #8be9fd;
+    font-size: 0.9em;
+    text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 15px #00d4ff, 0 0 20px #00d4ff;
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de brillo para el texto */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00d4ff;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00d4ff, 0 0 50px #00d4ff, 0 0 60px #00d4ff;
+    }
+}
+
+/* Estilos para dispositivos con pantalla grande */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Estilos para dispositivos con pantalla mediana */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Estilos para dispositivos con pantalla pequeña */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Estilos para dispositivos con pantalla muy pequeña */
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
